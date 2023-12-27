@@ -30,4 +30,9 @@ public class QuestionServicesImpl implements QuestionServices {
     public Question getSingleQuestion(Long id) {
         return questionRepository.findById(id).orElseThrow(() -> new RuntimeException("Data Not Found!!!"));
     }
+
+    @Override
+    public List<Question> getQuestionsByQuizId(Long quizId) {
+        return questionRepository.findAllByQuizId(quizId);
+    }
 }

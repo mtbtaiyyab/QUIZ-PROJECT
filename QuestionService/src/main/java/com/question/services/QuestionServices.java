@@ -12,4 +12,6 @@ public interface QuestionServices {
     List<Question> get();
 
     Question getSingleQuestion(Long id);
+
+    List<Question> getQuestionsByQuizId(Long quizId);
 }
